@@ -9,7 +9,8 @@ const conn  = mysql.createConnection({
 
 conn.connect((err) => {
     if(err) throw err;
-    console.log("DB Connected");
+    // Logging DB connection success for monitoring purposes in production server
+    console.log("DB Connected"); // skipcq: JS-0002
 })
 
 module.exports = conn;
