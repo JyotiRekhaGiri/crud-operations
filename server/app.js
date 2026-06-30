@@ -20,5 +20,6 @@ app.use(router)
 
 
 app.listen(port, ()=> {
-    console.log("server starts at port no :" + port);
+    // Log server start for operational visibility
+    console.log("server starts at port no :" + port); // skipcq: JS-0002
 })

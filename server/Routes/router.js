@@ -21,7 +21,7 @@ router.post("/create", (req,res) => {
             } else {
                 conn.query("INSERT INTO users SET ?", { name, email, age, mobile, work, add, desc },(err,result) =>{
                     if(err){
-                        console.log("err" + err)
+                        res.status(500).json({ error: err.message });
                     } else {
                         res.status(201).json(req.body);
                     }
